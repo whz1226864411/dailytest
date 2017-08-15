@@ -1,7 +1,6 @@
 package client;
 
-import bean.MyTestBean;
-import org.junit.Assert;
+import bean.User;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -15,7 +14,7 @@ public class BeanFactoryTest {
     @Test
     public void testSimpleLoad(){
         BeanFactory bf =new XmlBeanFactory(new ClassPathResource(("beanFactoryTest.xml")));
-        MyTestBean myTestBean = (MyTestBean)bf.getBean("myTestBean");
-        System.out.println(myTestBean.getName());
+        User myTestBean = (User)bf.getBean("aa");
+        System.out.println(myTestBean.getEmail());
     }
 }
