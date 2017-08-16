@@ -4,7 +4,6 @@
        xmlns:task="http://www.springframework.org/schema/task"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:myname="http://www.corefuture.cn/schema/user"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
@@ -14,10 +13,10 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx.xsd
-        http://www.corefuture.cn/schema/user
-        http://www.corefuture.cn/schema/user.xsd">
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <bean id="myTestBean" class="bean.MyTestBean"></bean>
-    <myname:user id="aa" userName="aaaa" email="aaaa"/>
+        <bean id="user" class="factorybean.UserFactoryBean" scope="singleton">
+            <property name="infors" value="whz,54524@qq.com"></property>
+        </bean>
+
 </beans>

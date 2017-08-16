@@ -14,7 +14,8 @@ public class BeanFactoryTest {
     @Test
     public void testSimpleLoad(){
         BeanFactory bf =new XmlBeanFactory(new ClassPathResource(("beanFactoryTest.xml")));
-        User myTestBean = (User)bf.getBean("aa");
-        System.out.println(myTestBean.getEmail());
+        User myTestBean = (User)bf.getBean("user");
+        User myTestBean1 = (User)bf.getBean("user");
+        System.out.println(myTestBean == myTestBean1);
     }
 }
