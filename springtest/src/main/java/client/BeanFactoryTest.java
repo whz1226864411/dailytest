@@ -1,10 +1,18 @@
 package client;
 
+import bean.Chicken;
+import bean.Egg;
 import bean.User;
 import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
+
+import java.security.acl.LastOwnerException;
+import java.util.Locale;
 
 /**
  * Created by Administrator on 2017/8/14 0014.
@@ -13,9 +21,9 @@ public class BeanFactoryTest {
 
     @Test
     public void testSimpleLoad(){
-        BeanFactory bf =new XmlBeanFactory(new ClassPathResource(("beanFactoryTest.xml")));
-        User myTestBean = (User)bf.getBean("user");
-        User myTestBean1 = (User)bf.getBean("user");
-        System.out.println(myTestBean == myTestBean1);
+        ApplicationContext context = new ClassPathXmlApplicationContext("beanFactoryTest.xml");
+        Object[] params = {"whz"};
+        System.out.println(context.getMessage("test",params, Locale.CHINA));
+        System.out.println(context.getMessage("test",params, Locale.US));
     }
 }

@@ -15,8 +15,12 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-        <bean id="user" class="factorybean.UserFactoryBean" scope="singleton">
-            <property name="infors" value="whz,54524@qq.com"></property>
+        <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+                <property name="basenames">
+                        <list>
+                                <value>messages</value>
+                        </list>
+                </property>
         </bean>
 
 </beans>

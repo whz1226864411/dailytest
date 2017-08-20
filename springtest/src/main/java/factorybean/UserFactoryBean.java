@@ -9,11 +9,8 @@ import org.springframework.beans.factory.FactoryBean;
 public class UserFactoryBean implements FactoryBean<User>{
     private String infors;
     public User getObject() throws Exception {
-        User user = new User();
-        String[] infor = infors.split(",");
-        user.setEmail(infor[1]);
-        user.setUserName(infor[0]);
-        return user;
+
+        return null;
     }
 
     public Class<?> getObjectType() {
