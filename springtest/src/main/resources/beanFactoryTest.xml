@@ -15,12 +15,8 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-        <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
-                <property name="basenames">
-                        <list>
-                                <value>messages</value>
-                        </list>
-                </property>
-        </bean>
+        <aop:aspectj-autoproxy/>
+        <bean id="test" class="bean.AopTest"/>
+        <bean class="advisor.AspectJTest"/>
 
 </beans>

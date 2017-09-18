@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/annotation/annotation.iml" filepath="$PROJECT_DIR$/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/shop.iml" filepath="$PROJECT_DIR$/shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/shopone/shopone.iml" filepath="$PROJECT_DIR$/shopone/shopone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springmvctest/springmvctest.iml" filepath="$PROJECT_DIR$/springmvctest/springmvctest.iml" />
       <module fileurl="file://$PROJECT_DIR$/springtest/springtest.iml" filepath="$PROJECT_DIR$/springtest/springtest.iml" />
     </modules>
   </component>

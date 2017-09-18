@@ -31,7 +31,7 @@ public class Server {
             serverSocketChannel.configureBlocking(false);
             serverSocketChannel.register(selector,SelectionKey.OP_ACCEPT);
             while(true) {
-                selector.select(200);
+                selector.select();
                 Set<SelectionKey> selectionKeys = selector.selectedKeys();
                 Iterator<SelectionKey> iterator = selectionKeys.iterator();
                 SelectionKey selectionKey = null;
@@ -52,6 +52,7 @@ public class Server {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
+
                         } else if (selectionKey.isReadable()) {
                             SocketChannel socketChannel = (SocketChannel)selectionKey.channel();
                             ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
@@ -63,7 +64,6 @@ public class Server {
                                 socketChannel.close();
                                 selectionKey.cancel();
                             }
-
 
                         }
                     }

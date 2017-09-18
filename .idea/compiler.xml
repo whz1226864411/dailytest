@@ -6,14 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="annotation" />
         <module name="shopone" />
+        <module name="springmvctest" />
         <module name="springtest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aaa" target="1.5" />
+      <module name="annotation" target="1.5" />
       <module name="shop" target="1.5" />
       <module name="shopone" target="1.5" />
+      <module name="springmvctest" target="1.5" />
       <module name="springtest" target="1.5" />
     </bytecodeTargetLevel>
   </component>
