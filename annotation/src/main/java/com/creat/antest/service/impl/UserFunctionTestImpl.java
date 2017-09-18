@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserFunctionTestImpl implements UserFunctionTest{
-    public void sayHello() {
-        System.out.println("哈哈哈哈");
+    public String sayHello() {
+        return "hello";
     }
 }

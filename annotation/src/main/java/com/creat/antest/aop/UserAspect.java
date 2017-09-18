@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class UserAspect {
-    @Before("execution(* *(..))")
+    @Before("execution(* com.creat.antest.service.impl.*.*(..))")
     public void before(){
         System.out.println("开始了！");
     }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //将之前的indexof功能放到一个函数中
+        //该函数需要两个参数，一个为数组，一个为需要寻找的数字
+        function myIndexOf(array,shuzi) {
+            var index = -1;
+            //遍历数组
+            for(var i = 0; i < array.length; i++){
+                //如果元素等于需要查找的数字，
+                // 将下标i赋值给结果index，然后break跳出循环
+                if(array[i] == shuzi){
+                    index = i;
+                    break;
+                }
+            }
+            //返回下标
+            return index;
+        }
+        //进行测试
+        function  test() {
+            //定义两个测试数据，一个为数组，一个为需要查询的数字
+            var array = [15,48,86,47];
+            var shuzi = 48;
+            //调用函数myIndexOf,传入参数：array和shuzui
+            var index = myIndexOf(array,shuzu);
+            //输出结果
+            alert(index);
+        }
+    </script>
+</head>
+<body>
+<!--//假定一个数组-->
+<!--//        var array = [15,48,86,47];-->
+<!--//        //假定一个需要查找的数字-->
+<!--//        var shuzi = 48;-->
+<!--//        //开始实现indexOf的功能-->
+<!--//        var index = -1;-->
+<!--//        //遍历数组-->
+<!--//        for(var i = 0; i < array.length; i++){-->
+<!--//            //如果元素等于需要查找的数字，-->
+<!--//            // 将下标i赋值给结果index，然后break跳出循环-->
+<!--//            if(array[i] == shuzi){-->
+<!--//                index = i;-->
+<!--//                break;-->
+<!--//            }-->
+<!--//        }-->
+<!--//        //功能结束，得到下标index，并输出-->
+<!--//        alert(index);-->
+</body>
+</html>

@@ -12,8 +12,7 @@ public class Main {
 
     public static void main(String[] args){
         AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(ServiceConfig.class);
-        context.register(AopConfig.class);
+                new AnnotationConfigApplicationContext(ServiceConfig.class,AopConfig.class);
         UserFunctionTest test = context.getBean(UserFunctionTest.class);
         test.sayHello();
         context.close();

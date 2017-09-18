@@ -9,6 +9,5 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 @ComponentScan("com.creat.antest.aop")
 @Configuration
-@EnableAspectJAutoProxy
 public class AopConfig {
 }
