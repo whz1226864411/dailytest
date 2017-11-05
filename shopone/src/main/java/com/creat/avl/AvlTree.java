@@ -1,12 +1,12 @@
 package com.creat.avl;
 
 /**
- * Created by Administrator on 2017/8/12 0012.
+ * Created by whz on 2017/8/12 0012.
  */
 public class AvlTree<E extends Comparable<? super E>> {
 
     private AvlNode<E> root;
-    private static class AvlNode<E>{
+    private class AvlNode<E>{
         E element;
         AvlNode<E> left;
         AvlNode<E> right;

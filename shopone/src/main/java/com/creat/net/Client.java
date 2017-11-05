@@ -13,6 +13,7 @@ import java.util.Scanner;
  * Created by Administrator on 2017/7/31 0031.
  */
 public class Client {
+
     public static void main(String[] args) throws UnknownHostException {
         try {
             final Socket socket = new Socket(InetAddress.getLocalHost(),12580);
